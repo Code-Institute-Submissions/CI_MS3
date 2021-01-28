@@ -16,12 +16,16 @@
         {{ recipe.recipe_category }}<br>
         {{ recipe.recipe_description }}<br>
         {{ recipe.servings }}<br>
+
         {% for ingredient in recipe.ingredients %}
             {{ ingredient }}<br>
         {% endfor %}
+
         {{ recipe.prep_time }}<br>
 
-        {{ recipe.instructions }}<br>
+        {% for instruction in recipe.instructions %}<br>
+            {{ instruction }}<br>
+        {% endfor %}
     {% endfor %}
 
 </body>
