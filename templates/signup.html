@@ -2,16 +2,38 @@
 {% block content %}
 
 <main>
+    <!--Sign up form -->
     <div class="container">
         <div class="row">
-            <form class="col s12 m8 offset-m2">
-                <div class="card-panel signup-card green lighten-2">
-                    <span class="white-text">
-                        Sign up and join the community!
-                    </span>
+            <h1 class="center-align"> Join the community! </h1>
+            <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('signup') }}">
+                <div class="card-panel rounded-element green lighten-2">
+                    <!-- Username -->
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-edit prefix white-text"></i>
+                        <input id="username" name="username" type="text" class="validate">
+                        <label for="username" class="white-text">Username</label>
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-key prefix white-text"></i>
+                            <input id="password" name="password" type="password" class="validate">
+                            <label for="password" class="white-text">Password</label>
+                        </div>
+                    </div>
+                    <!-- Sign up button -->
+                    <div class="row">
+                        <button type="submit" class="col s12 btn-large grey lighten-3 light-green-text rounded-element waves-effect">
+                            Sign Up!
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>
+
     </div>
 </main>
 
