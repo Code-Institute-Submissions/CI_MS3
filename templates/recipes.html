@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
-</head>
-
-<body>
-
-    <h1>Is this showing still?</h1>
+{% block content %}
 
     {% for recipe in recipes %}
         {{ recipe.recipe_name }}<br>
@@ -28,6 +19,4 @@
         {% endfor %}
     {% endfor %}
 
-</body>
-
-</html>
+{% endblock %}
