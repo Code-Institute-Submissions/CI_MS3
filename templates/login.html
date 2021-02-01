@@ -2,16 +2,16 @@
 {% block content %}
 
 <main>
-    <!--Sign up form -->
+    <!--Login form -->
     <div class="container">
         <div class="row">
-            <h3 class="center-align"> Join the community! </h3>
-            <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('signup') }}">
+            <h3 class="center-align"> Log In! </h3>
+            <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('login') }}">
                 <div class="card-panel rounded-element green lighten-2">
                     <!-- Username -->
                     <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-edit prefix white-text"></i>
+                        <i class="fas fa-sign-in-alt prefix white-text"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required>
                         <label for="username" class="white-text">Username</label>
                         </div>
@@ -27,12 +27,13 @@
                     <!-- Sign up button -->
                     <div class="row">
                         <button type="submit" class="col s12 btn-large grey lighten-3 light-green-text rounded-element waves-effect">
-                            Sign Up!
+                            Log In!
                         </button>
                     </div>
                 </div>
             </form>
         </div>
+
     </div>
 </main>
 
@@ -40,7 +41,7 @@
     <div class="row">
         <div class="col s12 m8 offset-m2 l6 offset-l3 rounded-element green lighten-2">
             <p class="center-align white-text">
-                <a href="{{ url_for('login') }}" class="white-text">Already have an account? Log in here!</a>
+                <a href="{{ url_for('signup') }}" class="white-text">Don't have an account yet? Sign up here!</a>
             </p>
         </div>
     </div>
