@@ -1,3 +1,29 @@
+
+/* FOOTER */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+}
+
+/* Converting social links list to inline, solution from Stack Overflow */
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 /* SIGNUP */
 
 .rounded-element {
