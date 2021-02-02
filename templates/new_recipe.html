@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main>
+    <div class="container green lighten-2">
+        <h4 class="center-align">Add a recipe</h4>
+        <div class="row">
+            <form class="col s12" method="POST" action="">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe_name" type="text" class="validate">
+                        <label for="recipe_name">Recipe Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe_category" type="text" class="validate">
+                        <label for="recipe_category">Recipe Category</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe_description" type="text" class="validate">
+                        <label for="recipe_description">Description</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="servings" type="text" class="validate">
+                        <label for="servings">Servings</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="prep_time" type="text" class="validate">
+                        <label for="prep_time">Prep Time</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
