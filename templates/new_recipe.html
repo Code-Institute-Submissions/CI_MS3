@@ -2,13 +2,14 @@
 {% block content %}
 
 <main>
-    <div class="container green lighten-2">
+    <div class="container">
         <h4 class="center-align">Add a recipe</h4>
-        <div class="row">
+        <div class="row card-panel rounded-element green lighten-2">
             <form class="col s12" method="POST" action="">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_name" type="text" class="validate">
+                        <input id="recipe_name" name="recipe_name"
+                        minlength="5" maxlength="50" type="text" class="validate" required>
                         <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
@@ -20,7 +21,11 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
+                        <!--
                         <input id="recipe_description" type="text" class="validate">
+                        -->
+                        <textarea id="recipe_description" name="recipe_description"
+                        minlength="5" maxlength="150" class="materialize-textarea validate" required></textarea>
                         <label for="recipe_description">Description</label>
                     </div>
                 </div>
