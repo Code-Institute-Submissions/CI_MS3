@@ -90,8 +90,13 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/new_recipe")
+@app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
+    if request.method == "POST":
+        task = {
+            
+        }
+        mongo.db.tasks.insert_one()
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("new_recipe.html", categories=categories)
 
