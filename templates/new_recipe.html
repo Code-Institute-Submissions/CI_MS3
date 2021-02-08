@@ -19,35 +19,23 @@
                 </div>
 
                 <!-- Category select input -->
-                <div class="row">
-                <div class="input-field col s12">
-                    <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose recipe category</option>
-                        {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endfor %}
-                    </select>
-                    <label for="category_name" class="white-text">Recipe Category</label>
-                </div>
-                </div>
 
-                <!--
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="category_name" type="text" class="validate">
+                        <select id="category_name" name="category_name" class="validate" required>
+                            <option value="" disabled selected>Choose recipe category</option>
+                            {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endfor %}
+                        </select>
                         <label for="category_name" class="white-text">Recipe Category</label>
                     </div>
                 </div>
-                -->
 
                 <!-- Recipe description input -->
+
                 <div class="row">
                     <div class="input-field col s12">
-
-                        <!--
-                        <input id="recipe_description" type="text" class="validate">
-                        -->
-
                         <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="150"
                             class="materialize-textarea validate" required></textarea>
                         <label for="recipe_description" class="white-text">Description</label>
@@ -58,54 +46,71 @@
 
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input id="servings" type="text" class="validate">
+                        <input id="servings" type="text" class="validate" name="servings" required>
                         <label for="servings" class="white-text">Servings</label>
                     </div>
 
-                <!-- Prep-time input -->
-                
+                    <!-- Prep-time input -->
+
                     <div class="input-field col s12 m6">
-                        <input id="prep_time" type="text" class="validate">
+                        <input id="prep_time" type="text" class="validate" name="prep_time" required>
                         <label for="prep_time" class="white-text">Prep Time</label>
                     </div>
                 </div>
 
-                <!-- Ingredients input -->
+                <!-- Ingredients input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
+                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
 
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="ingredients" type="text" class="validate">
+                <div class="row" id="ingredient-field">
+                    <div class="input-field col s11">
+                        <input id="ingredients" type="text" class="validate" name="ingredients" required>
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
                 </div>
 
                 <div class="col s12">
-                <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Another ingredient</a>
+                    <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
+                        id="add_ingredient">Another ingredient</a>
                 </div>
 
-                                <!-- Ingredients input -->
+                <!-- Instructions input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
+                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
 
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="instructions" type="text" class="validate">
+                <div class="row" id="steps">
+                    <div class="input-field col s11">
+                        <input id="instructions" name="instructions" type="text" class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
                 </div>
 
                 <div class="col s12">
-                <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Another ingredient</a>
+                    <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
+                        id="add_instruction_step">Next Step</a>
                 </div>
 
-                <!-- Form submit button -->
+                <!-- Recipe Image URL -->
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="recipe-image" type="text" class="validate" name="recipe-image" required>
+                        <label for="recipe-image" class="white-text">Image URL</label>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
 
                 <div class="row">
                     <div class="col s12 center-align">
-                    <button class="btn-large waves-effect grey lighten-3 light-green-text rounded-element center-align" type="submit" name="action">
-                        <b>Submit</b>
-                    </button>
+                        <button
+                            class="btn-large waves-effect grey lighten-3 light-green-text rounded-element center-align"
+                            type="submit" name="action">
+                            <b>Submit</b>
+                        </button>
                     </div>
                 </div>
+
             </form>
+
         </div>
     </div>
 </main>
