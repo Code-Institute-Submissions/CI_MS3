@@ -90,7 +90,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_task", methods=["GET", "POST"])
+@app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
     if request.method == "POST":
         recipe = {
@@ -104,7 +104,7 @@ def new_recipe():
             "recipe_image": request.form.get("recipe_image"),
             "added_by": session["user"]
         }
-        mongo.db.tasks.insert_one(recipe)
+        mongo.db.recipes.insert_one(recipe)
         flash("Recipe added!")
         return redirect(url_for("all_recipes"))
 
