@@ -1,3 +1,8 @@
+/* INDIVIDUAL RECIPE PAGES */
+
+.recipe-image {
+    width: 90%;
+}
 
 /* FOOTER */
 
@@ -11,7 +16,7 @@ body {
     flex: 1 0 auto;
 }
 
-/* Converting social links list to inline, solution from Stack Overflow */
+/* Converting social links list to inline in Materialize, solution from Stack Overflow */
 
 .list-inline {
   padding-left: 0;
@@ -84,3 +89,6 @@ body {
     .input-field textarea.valid:focus~.helper-text::after {
         color: #26a69a;
     }
+
+
+
