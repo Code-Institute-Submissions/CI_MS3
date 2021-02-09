@@ -18,13 +18,13 @@ $("body").on("click","#remove_ingredient", function() {
     $(this).parents(".new-ingredient").remove();
 });
 
-// Add Step to Recipe Method
+// Add Step to Recipe Instructions
 $("#add_instruction_step").click(function() {
     $("#steps").append(stepField);
     M.updateTextFields();
 });
 
-// Remove the Step from Recipe
+// Remove the Step from Recipe Instructions
 $("body").on("click","#remove_instruction_step", function() {
    $(this).parents(".new-instruction-step").remove();
 });
