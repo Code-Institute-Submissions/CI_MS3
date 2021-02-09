@@ -12,11 +12,14 @@
             {{ ingredient }}<br>
         {% endfor %}
 
-        {{ recipe.prep_time }}<br>
+        {{ recipe.cook_time }}<br>
 
         {% for instruction in recipe.instructions %}<br>
             {{ instruction }}<br>
         {% endfor %}
+
+        {{recipe.added_by }}
+
     {% endfor %}
 
 {% endblock %}

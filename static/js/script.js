@@ -1,6 +1,7 @@
   $(document).ready(function(){
     $(".sidenav").sidenav({edge: "right"});
     $('select').formSelect();
+    $('.chips').chips();
   });
 
 // Add and remove ingredients and instruction steps in new recipe form, Solution by deevdz on Github adapted for this project
