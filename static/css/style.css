@@ -2,6 +2,12 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* BASE */
+
+.brand-logo {
+    font-family: 'Bad Script', cursive;
+}
+
 /* Short navbar wrapper fix, https://github.com/Dogfalo/materialize/issues/1000 */
 
 @media only screen and (max-width : 992px) {
@@ -12,44 +18,19 @@ text-align: center;
 }
 }
 
-/* BASE */
-
-.brand-logo {
-    font-family: 'Bad Script', cursive;
+.no-mb {
+    margin-bottom: 0px;
 }
 
 /* INDEX */
 
-
-/*
-.hero-image {
-    height: 100vh;
-
-    background: url("/static/images/hero-image1.jpg") no-repeat bottom right fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-*/
-/*
+/* hero-image width solution https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent */
 .hero-image {
     background-image: url("/static/images/hero-image1.jpg");
     background-repeat: no-repeat;
     height: 80vh;
     background-size: cover;
     background-position: center;
-}
-*/
-
-.hero-image {
-    background-image: url("/static/images/hero-image1.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 75vh;
 }
 
 /* INDIVIDUAL RECIPE PAGES */
