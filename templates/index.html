@@ -3,15 +3,22 @@
 
 <div class="hero-image">
     <div class="container">
-        <div class = "row">
-            <div class="col s12">
-
+        <div class="row callout rounded-element valign-wrapper">
+            <div class="col s10 offset-s2 m8 offset-m2 l6 offset-l3 center-align">
+                The index page
+                <a href="{{ url_for('all_recipes') }}">All recipes</a>
+                <br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
     </div>
 </div>
-
-The index page
-<a href="{{ url_for('all_recipes') }}">All recipes</a>
+<div class="row">
+    <div class="col s12">
+        <h3 class="choose-category">Choose a category!</h3>
+    </div>
+</div>
 
 {% endblock %}
