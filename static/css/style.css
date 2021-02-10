@@ -2,10 +2,54 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* Short navbar wrapper fix, https://github.com/Dogfalo/materialize/issues/1000 */
+
+@media only screen and (max-width : 992px) {
+nav .brand-logo {
+position: relative;
+display: block;
+text-align: center;
+}
+}
+
 /* BASE */
 
 .brand-logo {
     font-family: 'Bad Script', cursive;
+}
+
+/* INDEX */
+
+
+/*
+.hero-image {
+    height: 100vh;
+
+    background: url("/static/images/hero-image1.jpg") no-repeat bottom right fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+*/
+/*
+.hero-image {
+    background-image: url("/static/images/hero-image1.jpg");
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+*/
+
+.hero-image {
+    background-image: url("/static/images/hero-image1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 75vh;
 }
 
 /* INDIVIDUAL RECIPE PAGES */

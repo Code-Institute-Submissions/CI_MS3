@@ -30,6 +30,7 @@
         <nav class="nav-extended green lighten-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo center">The Donnybrook Cookbook</a>
+                <div class="row">
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('index') }}">Home</a></li>
@@ -44,6 +45,7 @@
                     <li><a href="#">Categories</a></li>
                     {% endif %}
                 </ul>
+                </div>
             </div>
         </nav>
 
