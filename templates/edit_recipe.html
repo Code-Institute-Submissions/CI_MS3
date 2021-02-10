@@ -12,20 +12,24 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text"
+                        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="5" maxlength="50" type="text"
                             class="validate" required>
                         <label for="recipe_name" class="white-text">Recipe Name</label>
                     </div>
                 </div>
 
-                <!-- Category select input -->
+                <!-- Category select input, NOTE THE CATEGORY DROPDOWN AUTOFILL FOR EDITING DOES NOT WORK CURRENTLY, NEED FIX -->
 
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="category_name" name="category_name" class="validate" required>
                             <option value="" disabled selected>Choose recipe category</option>
                             {% for category in categories %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                             {% endfor %}
                         </select>
                         <label for="category_name" class="white-text">Recipe Category</label>
@@ -37,7 +41,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <textarea id="recipe_description" name="recipe_description" minlength="5" maxlength="250"
-                            class="materialize-textarea validate" required></textarea>
+                            class="materialize-textarea validate" required>{{ recipe.recipe_description }}</textarea>
                         <label for="recipe_description" class="white-text">Description</label>
                     </div>
                 </div>
@@ -46,14 +50,14 @@
 
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input id="servings" type="text" class="validate" name="servings" required>
+                        <input id="servings" value="{{ recipe.servings }}" type="text" class="validate" name="servings" required>
                         <label for="servings" class="white-text">Servings</label>
                     </div>
 
                     <!-- Cook-time input -->
 
                     <div class="input-field col s12 m6">
-                        <input id="cook_time" type="text" class="validate" name="cook_time" required>
+                        <input id="cook_time" value="{{ recipe.cook_time }}" type="text" class="validate" name="cook_time" required>
                         <label for="cook_time" class="white-text">Cooking Time</label>
                     </div>
                 </div>
