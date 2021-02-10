@@ -1,3 +1,13 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+/* BASE */
+
+.brand-logo {
+    font-family: 'Bad Script', cursive;
+}
+
 /* INDIVIDUAL RECIPE PAGES */
 
 .recipe-image {
