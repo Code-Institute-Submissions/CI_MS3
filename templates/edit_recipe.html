@@ -98,10 +98,26 @@
 
                 <div class="row" id="steps">
                     <div class="input-field col s11">
-                        <input id="instructions" name="instructions" type="text" class="validate" required>
+                        {% for instruction in recipe.instructions %}
+                            {% if instruction == recipe.instructions[0] %}
+                        <input id="instructions" name="instructions" type="text" value="{{ instruction }}" class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
                 </div>
+
+                {% else %}
+                <div class="new-instruction-step">
+                    <div class="input-field col s11">
+                        <input type="text" name="instructions" class="validate" value="{{ instruction }}" required>
+                        <label for="instructions" class="white-text">Instructions</label>
+                    </div>
+                    <div class="col s1">
+                        <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align" id="remove_instruction_step">
+                            <i class="fas fa-minus-square"></i></a>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+                    </div>
 
                 <div class="col s12">
                     <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
@@ -112,7 +128,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_image" type="text" class="validate" name="recipe_image" required>
+                        <input id="recipe_image" type="text" value="{{ recipe.recipe_image }}" class="validate" name="recipe_image" required>
                         <label for="recipe_image" class="white-text">Image URL</label>
                     </div>
                 </div>
