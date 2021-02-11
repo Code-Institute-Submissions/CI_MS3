@@ -44,7 +44,7 @@
                 >Edit Recipe</a>
             </div>
             <div class="col s12 l6 center-align">
-                <a a href="" class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
+                <a a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
                 >Delete Recipe</a>
             </div>
         </div>
