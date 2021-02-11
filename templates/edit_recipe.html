@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<main>
+<main class="container">
     <!-- Add new recipe form -->
     <div class="container">
         <h4 class="center-align">Edit recipe</h4>
@@ -67,9 +67,25 @@
 
                 <div class="row" id="ingredient-field">
                     <div class="input-field col s11">
-                        <input id="ingredients" type="text" class="validate" name="ingredients" required>
+                        {% for ingredient in recipe.ingredients %}
+                            {% if ingredient == recipe.ingredients[0] %}
+                        <input id="ingredients" type="text" class="validate" value="{{ ingredient }}" name="ingredients" required>
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
+
+                    {% else %}
+                    <div class ="new-ingredient">
+                        <div class="input-field col s11">
+                            <input type="text" name="ingredients" value="{{ ingredient }}" class="validate" required>
+                            <label for="ingredients" class="white-text">Another ingredient</label>
+                        </div>
+                        <div class="col s1">
+                            <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align" id="remove_ingredient">
+                                <i class="fas fa-minus-square"></i></a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
 
                 <div class="col s12">
