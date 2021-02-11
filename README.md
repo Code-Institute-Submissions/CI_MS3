@@ -1,45 +1,114 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Donnybrook Cookbook Website
 
-Welcome ssruoh,
+This is recipe site where users can upload their recipes for others to use.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## UX
 
-## Gitpod Reminders
+#### User stories
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+**First Visitor Goals**
 
-`python3 -m http.server`
+* 
 
-A blue button should appear to click: *Make Public*,
+**Returning Visitor Goals**
 
-Another blue button should appear to click: *Open Browser*.
+* 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+** **
 
-A blue button should appear to click: *Make Public*,
+## Design
 
-Another blue button should appear to click: *Open Browser*.
+**Color Scheme**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Typography**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Imagery**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+** **
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Wireframes
 
---------
 
-Happy coding!
+
+## Features
+
+
+
+**Features To Implement**
+
+Ratings & Comments - It would be a helpful and nice feature if users could rate the recipes and comment on them.
+
+Images - Ideally, image submission should happen through uploading the files themselves rather than entering a URL due potential issues with images hosted elsewhere.
+
+More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
+
+Following users - A feature to allow users to follow others and get notifications about recipes added.
+
+A search functionality for keywords to help people find what they want once the collection size increased
+
+** **
+
+## Languages used
+
+* HTML5
+* CSS3
+* JavaScript
+* Materialize
+* Python
+* Flask
+* MongoDB
+* JQuery
+* Google Fonts
+* Font Awesome
+
+** **
+
+## Frameworks, Libraries & programs
+
+1. 
+* 
+
+
+** **
+
+## Testing
+
+W3C Markup Validator [Results]
+
+W3C CSS Validator [Results]
+
+**Known Issues**
+
+* 
+
+## Deployment
+
+
+
+** **
+
+## Testing User Requirements In UX section
+
+
+
+## Credits
+
+**Code**
+
+
+
+**Content**
+
+
+
+**Media**
+
+
+
+**Acknowledgments**
