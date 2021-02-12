@@ -19,12 +19,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# index page
 @app.route("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
 
 
+# all recipes page
 @app.route("/all_recipes")
 def all_recipes():
     recipes = mongo.db.recipes.find()
@@ -32,21 +34,22 @@ def all_recipes():
 
 
 @app.route("/get_recipe/<recipe_id>")
-def get(recipe_id):
+def get_recipe(recipe_id):
     single_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("get_recipe.html", recipe=single_recipe)
 
 
+# The signup
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        # if username already exists:
         if existing_user:
             flash("Username already exists!")
             return redirect(url_for("signup"))
-
+        # recover requested details and hash password, insert into database
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
