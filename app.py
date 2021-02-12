@@ -30,6 +30,10 @@ def all_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
+@app.route("/recipes_by_category/<category>")
+def recipes_by_category(category):
+    
+
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
