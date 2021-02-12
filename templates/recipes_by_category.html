@@ -1,24 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <div class="row">
-    <div class="col s12 m6">
-        <a href="#">
-      <div class="card medium">
+
+<main class="container">
+    <h3 class="orange-heading center-align">{{ name.category_name }}</h3>
+    {% for recipe in recipes %}
+    <div class="row">
+    <div class="col s12 m6">        
+    
+      <div class="card large">
         <div class="card-image">
-          <img src="#">
-          <span class="card-title">Recipe name</span>
+          <img src="{{ recipe.recipe_image }}" alt="Image">
+          <span class="card-title">{{ recipe.recipe_name }}</span>
         </div>
         <div class="card-content">
-          <p></p>
+          <p>{{ recipe.recipe_description }}</p>
         </div>
-        <div>
-          <p>added_by</p>
+        <div class="card-action">
+          <p>Recipe by: {{ recipe.added_by }}</p>
         </div>
       </div>
-      </a>
     </div>
+    {% endfor %}
   </div>
 
+</main>
 
 {% endblock %}
