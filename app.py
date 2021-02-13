@@ -33,6 +33,7 @@ def all_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# Recipes by category
 @app.route("/recipes_by_category/<category>")
 def recipes_by_category(category):
     category_current = {"category_name": category}
