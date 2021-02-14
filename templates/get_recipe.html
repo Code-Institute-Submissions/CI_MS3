@@ -5,13 +5,13 @@
     <div class="container">
 
         <div class="col s12">
-            <h3 class="light-green-text center-align">{{ recipe.recipe_name }}</h3>
+            <h3 class="orange-heading center-align">{{ recipe.recipe_name }}</h3>
             <h5 class="light-green-text">{{ recipe.category_name }}</h5>
             <p> {{ recipe.recipe_description }}</p>
         </div>
 
-        <div class="row card-panel rounded-element green lighten-2 valign-wrapper">
-            <div class="col s12 m6 white-text">
+        <div class="row card-panel rounded-element grey lighten-3 valign-wrapper">
+            <div class="col s12 m6">
                 <p>Servings: {{ recipe.servings }}</p>
                 <p>Cooking time: {{ recipe.cook_time }}</p>
                 <p>Recipe by: {{ recipe.added_by }}</p>
@@ -22,17 +22,24 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row card-panel grey lighten-3 rounded-element">
             <div class="col s12 m6">
+                <h4 class="orange-heading">Ingredients</h4>
                 {% for ingredient in recipe.ingredients %}
-                {{ ingredient }}<br>
+                <ul>
+                <li> - {{ ingredient }}</li>
+                </ul>
                 {% endfor %}
             </div>
 
             <div class="col s12 m6">
-                {% for instruction in recipe.instructions %}
-                {{ instruction }}<br>
+                <h4 class="orange-heading center">Instructions</h4>
+                <ol>
+                    {% for instruction in recipe.instructions %}
+                <li>{{ instruction }}</li><br>
                 {% endfor %}
+                </ol>
+                
             </div>
         </div>
         {% if session.user|lower == recipe.added_by|lower %}
