@@ -3,64 +3,56 @@
 
 <main>
     <!--Profile page -->
+
     <div class="container">
         <div class="row">
             <div class="col s12 m8 offset-m2 l6 offset-l3">
                 <div class="card-panel rounded-element green lighten-2">
-                    <h4 class="center-align">{{ username.capitalize() }}</h4>
+                    <h4 class="center-align white-text">{{ username.capitalize() }}</h4>
                 </div>
             </div>
         </div>
 
-    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h3 class="orange-heading center-align">My recipes</h3>
+                <p class="center-align">Here you can view, edit or delete your own recipes.</p>
+            </div>
+        </div>
+
         {% for recipe in recipes %}
         {% if session.user|lower == recipe.added_by|lower %}
-        <div class="col s12">
-            <h3 class="light-green-text center-align">{{ recipe.recipe_name }}</h3>
-            <h5 class="light-green-text">{{ recipe.category_name }}</h5>
-
-            <p> {{ recipe.recipe_description }}</p>
-        </div>
-
-        <div class="row card-panel rounded-element green lighten-2 valign-wrapper">
-            <div class="col s12 m6 white-text">
-                <p>Servings: {{ recipe.servings }}</p>
-                <p>Cooking time: {{ recipe.cook_time }}</p>
-                <p>Recipe by: {{ recipe.added_by }}</p>
-            </div>
-
-            <div class="col s12 m6">
-                <img src="{{ recipe.recipe_image }}" alt="Image" class="rounded-element recipe-image">
-            </div>
-        </div>
-
         <div class="row">
             <div class="col s12 m6">
-                {% for ingredient in recipe.ingredients %}
-                {{ ingredient }}<br>
-                {% endfor %}
-            </div>
 
-            <div class="col s12 m6">
-                {% for instruction in recipe.instructions %}
-                {{ instruction }}<br>
-                {% endfor %}
+                <div class="card large">
+                    <div class="card-image rounded-element">
+                        <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><img src="{{ recipe.recipe_image }}"
+                                alt="Image"></a>
+                        <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}">
+                            <h6 class="category-cards-text card-title">{{ recipe.recipe_name }}</h6>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <p class="light-green-text"><b>{{ recipe.category_name }}</b></p>
+                        <p>{{ recipe.recipe_description }}</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="added-by-text"><b>Recipe by: {{ recipe.added_by.capitalize() }}</b></p>
+
+                        <span><a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                            class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Edit</a>
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Delete</a></span>
+
+
+
+                    </div>
+                </div>
             </div>
+            {% endif %}
+            {% endfor %}
         </div>
-        <div class="row">
-            <div class="col s12 l6 center-align">
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
-                >Edit Recipe</a>
-            </div>
-            <div class="col s12 l6 center-align">
-                <a a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
-                >Delete Recipe</a>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    
-    </div>
 
     </div>
 </main>
