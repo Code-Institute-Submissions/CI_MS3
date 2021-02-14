@@ -121,6 +121,11 @@ https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-differ
     }
 }
 
+.sca-text {
+    font-size: 2rem;
+    color: orange;
+    font-family: 'Bad Script', cursive;
+}
 
 /* FOOTER */
 
