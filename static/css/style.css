@@ -51,6 +51,14 @@ body {
     border-radius: 0.5rem;
 }
 
+.all-recipes-card {
+    background-image: url("/static/images/all-recipes-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 15rem;
+}
+
 .breakfast-card {
     background-image: url("/static/images/breakfast-image.jpg");
     background-repeat: no-repeat;
@@ -148,6 +156,10 @@ body {
 
   main {
     flex: 1 0 auto;
+}
+
+li a i {
+    font-size: 20px;
 }
 
 /* Converting social links list to inline in Materialize, solution from Stack Overflow */
