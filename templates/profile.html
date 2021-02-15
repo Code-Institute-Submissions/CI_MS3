@@ -35,17 +35,15 @@
                     </div>
                     <div class="card-content">
                         <p class="light-green-text"><b>{{ recipe.category_name }}</b></p>
-                        <p>{{ recipe.recipe_description }}</p>
+                        <p class="card-description">{{ recipe.recipe_description }}</p>
                     </div>
                     <div class="card-action">
-                        <p class="added-by-text"><b>Recipe by: {{ recipe.added_by.capitalize() }}</b></p>
+                        <span class="added-by-text"><b>Recipe by: {{ recipe.added_by.capitalize() }}</b></span>
 
                         <span><a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                             class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Edit</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                             class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align">Delete</a></span>
-
-
 
                     </div>
                 </div>
