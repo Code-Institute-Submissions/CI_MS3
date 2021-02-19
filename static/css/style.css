@@ -3,14 +3,6 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-a {
-    color: orange;
-}
-
-.profile-name {
-    margin-top: 15px;
-}
-
 /* BASE */
 
 .brand-logo {
@@ -109,6 +101,7 @@ a {
 
 /* RECIPE CARDS */
 
+
 .added-by-text {
     color: orange;
     font-family: 'Bad Script', cursive;
@@ -122,6 +115,10 @@ a {
 
 .card-description {
     font-size: 12.5px;
+}
+
+.card .card-image img {
+    height: 20rem;
 }
 
 /* INDIVIDUAL RECIPE PAGES */
@@ -152,6 +149,16 @@ https://stackoverflow.com/questions/19414856/how-can-i-make-all-images-of-differ
     font-size: 2rem;
     color: orange;
     font-family: 'Bad Script', cursive;
+}
+
+/* PROFILE */
+
+a {
+    color: orange;
+}
+
+.profile-name {
+    margin-top: 15px;
 }
 
 /* FOOTER */

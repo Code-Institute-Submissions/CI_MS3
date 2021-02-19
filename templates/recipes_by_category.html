@@ -15,7 +15,11 @@
         </div>
         <div class="card-content">
             <p class="light-green-text"><b>{{ recipe.category_name }}</b></p>
+            {% if recipe.recipe_description|length > 130 %}
+            <p class="card-description">{{ recipe.recipe_description|truncate(130, True) }}</p>
+            {% else %}
           <p class="card-description">{{ recipe.recipe_description }}</p>
+          {% endif %}
         </div>
         <div class="card-action">
           <p class="added-by-text"><b>Recipe by: {{ recipe.added_by.capitalize() }}</b></p>

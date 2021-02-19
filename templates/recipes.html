@@ -10,12 +10,16 @@
     
       <div class="card large">
         <div class="card-image rounded-element">
-          <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><img src="{{ recipe.recipe_image }}" alt="Image"></a>
+          <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><img class="" src="{{ recipe.recipe_image }}" alt="Image"></a>
           <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><h6 class="category-cards-text card-title">{{ recipe.recipe_name }}</h6></a>
         </div>
         <div class="card-content">
             <p class="light-green-text"><b>{{ recipe.category_name }}</b></p>
+            {% if recipe.recipe_description|length > 130 %}
+            <p class="card-description">{{ recipe.recipe_description|truncate(130, True) }}</p>
+            {% else %}
           <p class="card-description">{{ recipe.recipe_description }}</p>
+          {% endif %}
         </div>
         <div class="card-action">
           <p class="added-by-text"><b>Recipe by: {{ recipe.added_by.capitalize() }}</b></p>
