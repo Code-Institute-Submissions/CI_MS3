@@ -3,6 +3,14 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+a {
+    color: orange;
+}
+
+.profile-name {
+    margin-top: 15px;
+}
+
 /* BASE */
 
 .brand-logo {
