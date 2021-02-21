@@ -316,11 +316,11 @@ The code for this project is largely based on the lessons provided by [Code Inst
 
 [This Stack Overflow post](https://stackoverflow.com/questions/36458482/how-to-not-render-a-entire-string-with-jinja2) was used for inspiration as to how to truncate recipe descriptions in cards to avoid overflow.
 
-[The JS method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
+[The JQuery method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
 
 **Content**
 
-This readme is similar in structure and language to the readme files of my previous projects.
+This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute projects of [deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) and [MatthewYong](https://github.com/MatthewYong/recipes-connected)
 
 Site content such as callout, headings and the like were written by the developer.
 

@@ -2,7 +2,9 @@
 {% block content %}
 
 <main class="container">
+
     <!-- Add new recipe form -->
+
     <div class="container">
         <h3 class="center-align orange-heading add-edit-recipe-margin">Add a recipe</h3>
         <div class="row card-panel rounded-element green lighten-2">
@@ -58,8 +60,7 @@
                     </div>
                 </div>
 
-                <!-- Ingredients input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
-                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
+                <!-- Ingredients input -->
 
                 <div class="row" id="ingredient-field">
                     <div class="input-field col s11">
@@ -67,14 +68,12 @@
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
                 </div>
-
                 <div class="col s12">
                     <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
                         id="add_ingredient">Another ingredient</a>
                 </div>
 
-                <!-- Instructions input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
-                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
+                <!-- Instructions input -->
 
                 <div class="row" id="steps">
                     <div class="input-field col s11">
@@ -82,7 +81,6 @@
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
                 </div>
-
                 <div class="col s12">
                     <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
                         id="add_instruction_step">Next Step</a>
@@ -96,7 +94,7 @@
                         <label for="recipe_image" class="white-text">Image URL</label>
                     </div>
                 </div>
-                
+
                 <!-- Submit button -->
 
                 <div class="row">
@@ -108,9 +106,7 @@
                         </button>
                     </div>
                 </div>
-
             </form>
-
         </div>
     </div>
 </main>

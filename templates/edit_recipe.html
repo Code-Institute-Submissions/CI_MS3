@@ -2,7 +2,9 @@
 {% block content %}
 
 <main class="container">
+
     <!-- Add new recipe form -->
+
     <div class="container">
         <h3 class="center-align orange-heading add-edit-recipe-margin">Edit recipe</h3>
         <div class="row card-panel rounded-element green lighten-2">
@@ -12,13 +14,13 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="5" maxlength="50" type="text"
-                            class="validate" required>
+                        <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" minlength="5"
+                            maxlength="50" type="text" class="validate" required>
                         <label for="recipe_name" class="white-text">Recipe Name</label>
                     </div>
                 </div>
 
-                <!-- Category select input, NOTE THE CATEGORY DROPDOWN AUTOFILL FOR EDITING DOES NOT WORK CURRENTLY, NEED FIX -->
+                <!-- Category select input -->
 
                 <div class="row">
                     <div class="input-field col s12">
@@ -26,9 +28,9 @@
                             <option value="" disabled>Choose recipe category</option>
                             {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                             {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                             {% endif %}
                             {% endfor %}
                         </select>
@@ -50,75 +52,75 @@
 
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input id="servings" value="{{ recipe.servings }}" type="text" class="validate" name="servings" required>
+                        <input id="servings" value="{{ recipe.servings }}" type="text" class="validate" name="servings"
+                            required>
                         <label for="servings" class="white-text">Servings</label>
                     </div>
 
                     <!-- Cook-time input -->
 
                     <div class="input-field col s12 m6">
-                        <input id="cook_time" value="{{ recipe.cook_time }}" type="text" class="validate" name="cook_time" required>
+                        <input id="cook_time" value="{{ recipe.cook_time }}" type="text" class="validate"
+                            name="cook_time" required>
                         <label for="cook_time" class="white-text">Cooking Time</label>
                     </div>
                 </div>
 
-                <!-- Ingredients input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
-                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
+                <!-- Ingredients input -->
 
                 <div class="row" id="ingredient-field">
                     <div class="input-field col s11">
                         {% for ingredient in recipe.ingredients %}
-                            {% if ingredient == recipe.ingredients[0] %}
-                        <input id="ingredients" type="text" class="validate" value="{{ ingredient }}" name="ingredients" required>
+                        {% if ingredient == recipe.ingredients[0] %}
+                        <input id="ingredients" type="text" class="validate" value="{{ ingredient }}" name="ingredients"
+                            required>
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
-
                     {% else %}
-                    <div class ="new-ingredient">
+                    <div class="new-ingredient">
                         <div class="input-field col s11">
                             <input type="text" name="ingredients" value="{{ ingredient }}" class="validate" required>
                             <label for="ingredients" class="white-text">Another ingredient</label>
                         </div>
                         <div class="col s1">
-                            <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align" id="remove_ingredient">
+                            <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align"
+                                id="remove_ingredient">
                                 <i class="fas fa-minus-square"></i></a>
-                            </div>
                         </div>
+                    </div>
                     {% endif %}
                     {% endfor %}
                 </div>
-
                 <div class="col s12">
                     <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
                         id="add_ingredient">Another ingredient</a>
                 </div>
 
-                <!-- Instructions input, NOTE: The additional steps have an issue where clicking on the label might not trigger text input due to issue with injecting from JS,
-                     you might want to switch labels to placeholders entirely unless you find an eventual fix -->
+                <!-- Instructions input -->
 
                 <div class="row" id="steps">
                     <div class="input-field col s11">
                         {% for instruction in recipe.instructions %}
-                            {% if instruction == recipe.instructions[0] %}
-                        <input id="instructions" name="instructions" type="text" value="{{ instruction }}" class="validate" required>
+                        {% if instruction == recipe.instructions[0] %}
+                        <input id="instructions" name="instructions" type="text" value="{{ instruction }}"
+                            class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
-
-                {% else %}
-                <div class="new-instruction-step">
-                    <div class="input-field col s11">
-                        <input type="text" name="instructions" class="validate" value="{{ instruction }}" required>
-                        <label for="instructions" class="white-text">Instructions</label>
+                    {% else %}
+                    <div class="new-instruction-step">
+                        <div class="input-field col s11">
+                            <input type="text" name="instructions" class="validate" value="{{ instruction }}" required>
+                            <label for="instructions" class="white-text">Instructions</label>
+                        </div>
+                        <div class="col s1">
+                            <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align"
+                                id="remove_instruction_step">
+                                <i class="fas fa-minus-square"></i></a>
+                        </div>
                     </div>
-                    <div class="col s1">
-                        <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align" id="remove_instruction_step">
-                            <i class="fas fa-minus-square"></i></a>
-                        </div>
-                        </div>
                     {% endif %}
                     {% endfor %}
-                    </div>
-
+                </div>
                 <div class="col s12">
                     <a class="waves-effect btn-small grey lighten-3 light-green-text rounded-element center-align"
                         id="add_instruction_step">Next Step</a>
@@ -128,17 +130,17 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_image" type="text" value="{{ recipe.recipe_image }}" class="validate" name="recipe_image" required>
+                        <input id="recipe_image" type="text" value="{{ recipe.recipe_image }}" class="validate"
+                            name="recipe_image" required>
                         <label for="recipe_image" class="white-text">Image URL</label>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col s12 center-align">
                         <!-- Cancel button -->
                         <a href="{{ url_for('all_recipes') }}"
-                        class="btn-large waves-effect grey lighten-3 light-green-text rounded-element center-align"><b>Cancel Edit</b></a>
-                        
+                            class="btn-large waves-effect grey lighten-3 light-green-text rounded-element center-align"><b>Cancel
+                                Edit</b></a>
                         <button
                             class="btn-large waves-effect grey lighten-3 light-green-text rounded-element center-align"
                             type="submit" name="action">
@@ -146,9 +148,7 @@
                         </button>
                     </div>
                 </div>
-
             </form>
-
         </div>
     </div>
 </main>

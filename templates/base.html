@@ -26,10 +26,7 @@
 <body>
     <header>
 
-
-
         <!-- NAVIGATION, larger devices -->
-
         <!-- Dropdown for recipe categories -->
 
         <ul id="recipes-dropdown" class="dropdown-content">
@@ -40,7 +37,6 @@
             <li><a href="{{ url_for('recipes_by_category', category='Main') }}">Main</a></li>
             <li><a href="{{ url_for('recipes_by_category', category='Dessert') }}">Dessert</a></li>
         </ul>
-
         <nav class="nav-extended green lighten-2">
             <div class="nav-wrapper">
                 <a href="{{ url_for('index') }}" class="brand-logo center">The Donnybrook Cookbook</a>
@@ -63,6 +59,7 @@
         </nav>
 
         <!-- NAVIGATION, mobile -->
+
         <ul class="sidenav" id="mobile-demo">
             <li><a href="{{ url_for('index') }}">Home</a></li>
             <li><a href="{{ url_for('all_recipes') }}">All Recipes</a></li>
@@ -80,17 +77,17 @@
             <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
             {% endif %}
         </ul>
-
     </header>
 
     <!-- Flash messages -->
+
     <section>
 
         {% with messages = get_flashed_messages() %}
         {% if messages %}
         {% for message in messages %}
         <div class="flash">
-            <h3 class="green lighten-2 white-text center-align">{{ message }}</h3>
+            <h3 class="green lighten-2 white-text center-align bad-script">{{ message }}</h3>
         </div>
         {% endfor %}
         {% endif %}
