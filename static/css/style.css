@@ -18,6 +18,10 @@ body {
 
 /* BASE */
 
+.sidenav li>a {
+    color: #81C784;
+}
+
 .brand-logo {
     font-family: 'Bad Script', cursive;
 }
@@ -37,6 +41,14 @@ body {
 }
 
 /* INDEX */
+
+.sign-up-button {
+    margin-top: 1px;
+}
+
+.bad-script {
+    font-family: 'Bad Script', cursive;
+}
 
 /* hero-image width solution https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent */
 .hero-image {
