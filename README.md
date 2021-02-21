@@ -8,10 +8,31 @@ by others. Each recipe contains an ingredients list, instructions list, how long
 takes to prepare the dish and how many servings it contains. The recipes also
 contain an image of the dish.
 
+** **
+
+## UX
+
+#### User stories
+**As a first time visitor:**
+
+* It's immediately clear to me what the purpose of the site is.
+* I can browse recipes uploaded by others.
+* I can look for recipes that best suit what I'm currently looking for by viewing
+them by category.
+* I can create an account.
+
+**As a returning visitor:**
+* I can log in.
+* I can upload my own recipes.
+* I can view recipes I have uploaded.
+* I can edit my own recipes.
+* I can delete my own recipes.
+
+** **
 
 ## Database Schema
 
-The project utilizes [MongoDB](https://www.mongodb.com) to create the database. The database 'cookbook' is structured into three collections:
+The project utilizes [MongoDB](https://www.mongodb.com) for the creation of a database. The database 'cookbook' is structured into three collections:
 
 ![Database schema](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-schema.PNG)
 
@@ -22,24 +43,6 @@ Below are examples of entries in each collection:
 [recipes](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-recipes-image.PNG)
 
 [users](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-users-image.PNG)
-
-
-## UX
-
-#### User stories
-**As a user:**
-
-* It's immediately clear to me what the purpose of the site is.
-* I can browse recipes uploaded by others.
-* I can create an account.
-* I can log in.
-* I can upload my own recipes.
-* I can look for recipes that best suit what I'm currently looking for by viewing
-them by category.
-* I can view recipes I have uploaded.
-* I can edit my own recipes.
-* I can delete my own recipes.
-
 
 ** **
 
@@ -69,21 +72,26 @@ to showcase the recipes they represent.
 
 
 
+** **
+
 ## Features
 
-
+* Responsive on all screen sizes.
+* Each page includes a navigation bar.
+* Each page includes a footer with copyright information and social media links.
+* The landing page includes a short explanation of the site's purpose, as well as links to recipes sorted by their category. There are also links to sign up or log in to the site.
+* The Sign up page contains a form that lets users register an account.
+* The Log in page contains a form that allows users to log in to their account.
+* Users who log in gain access to the New Recipe link. This page includes a form that allows users to submit their own recipes to the site.
+* Users who log in gain access to the Profile link. This page allows users to view, edit and delete recipes they have uploaded.
 
 **Features To Implement**
 
-Ratings & Comments - It would be a helpful and nice feature if users could rate the recipes and comment on them.
-
-Images - Ideally, image submission should happen through uploading the files themselves rather than entering a URL due potential issues with images hosted elsewhere.
-
-More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
-
-Following users - A feature to allow users to follow others and get notifications about recipes added.
-
-A search functionality for keywords to help people find what they want once the collection size increased
+* Ratings & Comments - It would be a helpful and nice feature if users could rate the recipes and comment on them.
+* Images - Ideally, image submission should happen through uploading the files themselves rather than entering a URL due potential issues with images hosted elsewhere.
+* More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
+* Following users - A feature to allow users to follow others and get notifications about recipes added.
+* A search functionality for keywords to help people find what they want once the collection size increased.
 
 ** **
 
@@ -102,14 +110,6 @@ A search functionality for keywords to help people find what they want once the 
 
 ** **
 
-## Frameworks, Libraries & programs
-
-1. 
-* 
-
-
-** **
-
 ## Testing
 
 W3C Markup Validator [Results]
@@ -118,7 +118,9 @@ W3C CSS Validator [Results]
 
 **Known Issues**
 
-* 
+* Images in cards are sometimes subject to issues such as stretching and cropping.
+
+** **
 
 ## Deployment
 
@@ -164,7 +166,6 @@ $ git clone https://github.com/ssruoh/CI_MS3
 > remove: Total 10 (delta 1), reused 10 (delta 1)
 > Unpacking objects: 100% (10/10), done.
 ```
-** **
 
 **Setting up the environment variables**
 
@@ -229,22 +230,40 @@ if __name__ = “__main__”:
 
 ** **
 
-## Testing User Requirements In UX section
+## Testing User Requirements In UX Section
 
+**First time visitors**
 
+> It's immediately clear to me what the purpose of the site is.
+* 
+> I can browse recipes uploaded by others.
+* 
+> I can look for recipes that best suit what I'm currently looking for by viewing
+them by category.
+* 
+> I can create an account.
+* 
+
+**Returning visitors:**
+> I can log in.
+* 
+> I can upload my own recipes.
+* 
+> I can view recipes I have uploaded.
+* 
+> I can edit my own recipes.
+* 
+> I can delete my own recipes.
+* 
+
+** **
 
 ## Credits
 
 **Code**
 
-
-
 **Content**
 
-
-
 **Media**
-
-
 
 **Acknowledgments**
