@@ -3,6 +3,19 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+.select-wrapper .caret {
+    fill: white;
+}
+
+.select-wrapper input.select-dropdown {
+    color: white;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #81C784;
+
+}
+
 /* BASE */
 
 .brand-logo {
@@ -177,6 +190,10 @@ li a i {
     font-size: 20px;
 }
 
+footer {
+    margin-top: 30px;
+}
+
 /* Converting social links list to inline in Materialize, solution from Stack Overflow */
 
 .list-inline {
@@ -251,5 +268,9 @@ li a i {
         color: #26a69a;
     }
 
+/* Add, edit recipe form */
 
-
+.add-edit-recipe-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
