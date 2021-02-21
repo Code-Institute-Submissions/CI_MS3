@@ -70,7 +70,7 @@ to showcase the recipes they represent.
 
 ## Wireframes
 
-
+Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donnybrook%20Cookbook%20Wireframes.pdf) were drafted in MS Paint prior to development.
 
 ** **
 
@@ -115,6 +115,11 @@ to showcase the recipes they represent.
 W3C Markup Validator [Results]
 
 W3C CSS Validator [Results]
+
+JSHint JavaScript Validator [Results]
+
+PEP8 Python3 Validator [Results]
+
 
 **Known Issues**
 
@@ -269,8 +274,30 @@ them by category.
 
 **Code**
 
+[This Github issue post solution](https://github.com/Dogfalo/materialize/issues/1000) was adapted to stop the navbar brand logo from clipping out on smaller screen sizes.
+
+[This Stack Overflow solution](https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent) was used to achieve full-width hero image background.
+
+[This Stack Overflow solution](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss) was used to create a Bootstrap-like inline list for social links in the footer.
+
+[This Stack Overflow solution](https://stackoverflow.com/questions/37127123/change-color-of-underline-input-and-label-in-materialize-css-framework) was used to change the input and label colors for forms.
+
+[This Stack Overflow post](https://stackoverflow.com/questions/36458482/how-to-not-render-a-entire-string-with-jinja2) was used for inspiration as to how to truncate recipe descriptions in cards to avoid overflow.
+
+[The JS method used in this Code Institute project](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
+
 **Content**
+
+The recipes added to the site during development are from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com) and [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes). The same sites were used for inspiration for page layout and database structure.
 
 **Media**
 
+Images used during development are sourced from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com), [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes) or [Google Images](https://www.google.com/imghp?hl=en)
+
 **Acknowledgments**
+
+My Code Institute Mentor for helpful feedback and ideas.
+
+The Code Institute Tutors for their support.
+
+My friends for help with testing the site.
