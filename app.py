@@ -19,14 +19,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# index page
+# Index page
 @app.route("/")
 @app.route("/index")
 def index():
     return render_template("index.html")
 
 
-# all recipes page
+# All recipes page
 @app.route("/all_recipes")
 def all_recipes():
     recipes = mongo.db.recipes.find()
@@ -43,10 +43,15 @@ def recipes_by_category(category):
         "recipes_by_category.html", recipes=recipes, name=name)
 
 
+# Page for each individual recipe
 @app.route("/get_recipe/<recipe_id>")
 def get_recipe(recipe_id):
     single_recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    return render_template("get_recipe.html", recipe=single_recipe)
+    if single_recipe:
+        return render_template("get_recipe.html", recipe=single_recipe)
+    # If page for recipe is not found
+    else:
+        return render_template("404.html")
 
 
 # The signup
@@ -55,29 +60,30 @@ def signup():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        # if username already exists:
+        # If username already exists:
         if existing_user:
             flash("Username already exists!")
             return redirect(url_for("signup"))
-        # recover requested details and hash password, insert into database
+        # Recover requested details and hash password, insert into database
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
-
+        # On successful signup
         session["user"] = request.form.get("username").lower()
         flash("Signup Successful!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("signup.html")
 
 
+# Log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        # On successful login
         if existing_user:
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
@@ -85,10 +91,11 @@ def login():
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(url_for(
                         "profile", username=session["user"]))
+            # If username or password don't match
             else:
                 flash("Incorrect username, password or both!")
                 return redirect(url_for("login"))
-
+        # If username is not found
         else:
             flash("Incorrect username, password or both!")
             return redirect(url_for("login"))
@@ -96,6 +103,7 @@ def login():
     return render_template("login.html")
 
 
+# Profile page, also lists recipes added by current user on the page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
@@ -109,6 +117,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# Logout
 @app.route("/logout")
 def logout():
     flash("You logged out!")
@@ -116,6 +125,7 @@ def logout():
     return redirect(url_for("login"))
 
 
+# Add new recipe
 @app.route("/new_recipe", methods=["GET", "POST"])
 def new_recipe():
     if request.method == "POST":
@@ -138,6 +148,7 @@ def new_recipe():
     return render_template("new_recipe.html", categories=categories)
 
 
+# Edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -161,6 +172,7 @@ def edit_recipe(recipe_id):
         "edit_recipe.html", recipe=recipe, categories=categories)
 
 
+# Delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -169,7 +181,6 @@ def delete_recipe(recipe_id):
 
 
 # Error pages, 404 & 500
-
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
