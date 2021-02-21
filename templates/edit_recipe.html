@@ -103,7 +103,6 @@
                         <input id="instructions" name="instructions" type="text" value="{{ instruction }}" class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
-                </div>
 
                 {% else %}
                 <div class="new-instruction-step">
@@ -114,6 +113,7 @@
                     <div class="col s1">
                         <a class="btn-small waves-effect grey lighten-3 light-green-text rounded-element center-align" id="remove_instruction_step">
                             <i class="fas fa-minus-square"></i></a>
+                        </div>
                         </div>
                     {% endif %}
                     {% endfor %}
