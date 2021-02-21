@@ -32,7 +32,8 @@ them by category.
 
 ## Database Structure
 
-The project utilizes [MongoDB](https://www.mongodb.com) for the creation of a database. The database 'cookbook' is structured into three collections:
+The project utilizes [MongoDB](https://www.mongodb.com) for the creation of a database. The database
+'cookbook' is structured into three collections:
 
 ![Database schema](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-schema.PNG)
 
@@ -70,7 +71,8 @@ to showcase the recipes they represent.
 
 ## Wireframes
 
-Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donnybrook%20Cookbook%20Wireframes.pdf) were drafted in MS Paint prior to development.
+Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donnybrook%20Cookbook%20Wireframes.pdf) 
+were drafted in MS Paint prior to development.
 
 ** **
 
@@ -79,7 +81,8 @@ Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donn
 * Responsive on all screen sizes.
 * Each page includes a navigation bar.
 * Each page includes a footer with copyright information and social media links.
-* The landing page includes a short explanation of the site's purpose, as well as links to recipes sorted by their category. There are also links to sign up or log in to the site.
+* The landing page includes a short explanation of the site's purpose, as well as links to recipes sorted by their category. 
+There are also links to sign up or log in to the site.
 * The Sign up page contains a form that lets users register an account.
 * The Log in page contains a form that allows users to log in to their account.
 * Users who log in gain access to the New Recipe link. This page includes a form that allows users to submit their own recipes to the site.
@@ -88,8 +91,10 @@ Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donn
 **Features To Implement**
 
 * Ratings & Comments - It would be a helpful and nice feature if users could rate the recipes and comment on them.
-* Images - Ideally, image submission should happen through uploading the files themselves rather than entering a URL due potential issues with images hosted elsewhere.
-* More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
+* Images - Ideally, image submission should happen through uploading the files themselves rather than entering a URL due potential issues with
+ images hosted elsewhere.
+* More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and
+ perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
 * Following users - A feature to allow users to follow others and get notifications about recipes added.
 * A search functionality for keywords to help people find what they want once the collection size increased.
 
@@ -287,7 +292,8 @@ them by category.
 * The navigation bar has a link to form that allows users to log in.
 
 > I can upload my own recipes.
-* There is a link in the navigation bar for users to add New Recipe. On the Profile page, users who have not yet added recipes are also encouraged to get started and provided a link to the New Recipe page as well.
+* There is a link in the navigation bar for users to add New Recipe. On the Profile page, users who have not yet added recipes are also encouraged to get started and
+ provided a link to the New Recipe page as well.
 
 > I can view recipes I have uploaded.
 * On the Profile page where users land as they sign in, the recipes added by the user are listed.
@@ -308,27 +314,35 @@ The code for this project is largely based on the lessons provided by [Code Inst
 
 [This Github issue post solution](https://github.com/Dogfalo/materialize/issues/1000) was adapted to stop the navbar brand logo from clipping out on smaller screen sizes.
 
-[This Stack Overflow solution](https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent) was used to achieve full-width hero image background.
+[This Stack Overflow solution](https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent) was used to achieve full-width
+ hero image background.
 
-[This Stack Overflow solution](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss) was used to create a Bootstrap-like inline list for social links in the footer.
+[This Stack Overflow solution](https://stackoverflow.com/questions/42884750/how-to-create-inline-lists-in-materializecss) was used to create a Bootstrap-like inline list for
+ social links in the footer.
 
-[This Stack Overflow solution](https://stackoverflow.com/questions/37127123/change-color-of-underline-input-and-label-in-materialize-css-framework) was used to change the input and label colors for forms.
+[This Stack Overflow solution](https://stackoverflow.com/questions/37127123/change-color-of-underline-input-and-label-in-materialize-css-framework) was used to change the input
+ and label colors for forms.
 
-[This Stack Overflow post](https://stackoverflow.com/questions/36458482/how-to-not-render-a-entire-string-with-jinja2) was used for inspiration as to how to truncate recipe descriptions in cards to avoid overflow.
+[This Stack Overflow post](https://stackoverflow.com/questions/36458482/how-to-not-render-a-entire-string-with-jinja2) was used for inspiration as to how to truncate recipe 
+descriptions in cards to avoid overflow.
 
-[The JQuery method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
+[The JQuery method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and 
+delete input fields for add and edit recipe forms.
 
 **Content**
 
-This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute projects of [deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) and [MatthewYong](https://github.com/MatthewYong/recipes-connected)
+This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute projects
+ of [deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) and [MatthewYong](https://github.com/MatthewYong/recipes-connected)
 
 Site content such as callout, headings and the like were written by the developer.
 
-The recipes added to the site during development are from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com) and [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes). The same sites were used for inspiration for page layout and database structure.
+The recipes added to the site during development are from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com) and 
+[bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes). The same sites were used for inspiration for page layout.
 
 **Media**
 
-Images used during development are sourced from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com), [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes) or [Google Images](https://www.google.com/imghp?hl=en)
+Images used during development are sourced from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com), 
+[bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes) or [Google Images](https://www.google.com/imghp?hl=en)
 
 **Acknowledgments**
 

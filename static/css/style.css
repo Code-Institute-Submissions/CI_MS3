@@ -24,7 +24,7 @@ body {
     color: #81C784;
 }
 
-/* Short navbar wrapper fix, https://github.com/Dogfalo/materialize/issues/1000 */
+/* Short navbar wrapper fix from Github forums */
 
 @media only screen and (max-width : 992px) {
     nav .brand-logo {
