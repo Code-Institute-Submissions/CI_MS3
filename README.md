@@ -8,6 +8,22 @@ by others. Each recipe contains an ingredients list, instructions list, how long
 takes to prepare the dish and how many servings it contains. The recipes also
 contain an image of the dish.
 
+
+## Database Schema
+
+The project utilizes [MongoDB](https://www.mongodb.com) to create the database. The database 'cookbook' is structured into three collections:
+
+![Database schema](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-schema.PNG)
+
+Below are examples of entries in each collection:
+
+[categories](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-categories-image.PNG)
+
+[recipes](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-recipes-image.PNG)
+
+[users](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-users-image.PNG)
+
+
 ## UX
 
 #### User stories
