@@ -235,26 +235,33 @@ if __name__ = “__main__”:
 **First time visitors**
 
 > It's immediately clear to me what the purpose of the site is.
-* 
+* The landing page of the site has a large callout explaining the purpose of the site, and it also prompts newcomers to sign up to the site.
+
 > I can browse recipes uploaded by others.
-* 
+* The landing page and navigation bar contain links to all recipes.
+
 > I can look for recipes that best suit what I'm currently looking for by viewing
 them by category.
-* 
+* The landing page and navigation bar contain links to recipes sorted by their category.
+
 > I can create an account.
-* 
+* Newcomers are instructed to sign up to the site on the landing page, and there is a link in the navigation bar to do the same if users aren't signed in.
 
 **Returning visitors:**
 > I can log in.
-* 
+* The navigation bar has a link to form that allows users to log in.
+
 > I can upload my own recipes.
-* 
+* There is a link in the navigation bar for users to add New Recipe. On the Profile page, users who have not yet added recipes are also encouraged to get started and provided a link to the New Recipe page as well.
+
 > I can view recipes I have uploaded.
-* 
+* On the Profile page where users land as they sign in, the recipes added by the user are listed.
+
 > I can edit my own recipes.
-* 
+* On the profile page, the recipe cards for recipes added by the user contain an Edit button.
+
 > I can delete my own recipes.
-* 
+* On the profile page, the recipe cards for recipes added by the user contain a Delete button.
 
 ** **
 
