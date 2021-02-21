@@ -30,7 +30,7 @@ them by category.
 
 ** **
 
-## Database Schema
+## Database Structure
 
 The project utilizes [MongoDB](https://www.mongodb.com) for the creation of a database. The database 'cookbook' is structured into three collections:
 
@@ -95,31 +95,61 @@ Preliminary [wireframes](https://github.com/ssruoh/CI_MS3/blob/master/The%20Donn
 
 ** **
 
-## Technologies used
+## Languages used
 
 * HTML5
 * CSS3
 * JavaScript
-* Materialize
 * Python
-* Flask
-* MongoDB
-* JQuery
-* Google Fonts
-* Font Awesome
+* Jinja
+
+## Frameworks, Libraries & programs
+
+1. Materialize 1.0.0
+* Used for responsive site styling.
+2. Flask
+* The web framework used for building the application.
+3. MongoDB
+* The service used to store the data necessary for building the site.
+4. JQuery
+* JavaScript Library used primarily for enhanced Materialize functionality
+5. Google Fonts
+* Used to source the fonts used for the site.
+6. Font Awesome
+* Used for a few of its icons, such as the social media icons and the minus sign for deleting an input field.
+7. Git
+* Used for version control during development.
+8. Github
+* The code hosting platform for this project.
 
 ** **
 
 ## Testing
 
-W3C Markup Validator [Results]
+**Tools**
 
-W3C CSS Validator [Results]
+W3C Markup Validator was used to validate the HTML code. [Results]()
 
-JSHint JavaScript Validator [Results]
+W3C CSS Validator was used to validate the CSS code. [Results]()
 
-PEP8 Python3 Validator [Results]
+JSHint was used to validate the JavaScript code. [Results]()
 
+PEP8 Online was used to validate the Python code. [Results]()
+
+**Manual**
+
+* Checked that there are no prominent issues with overflow or clipping on any of the pages.
+* Checked that users who are not logged in have access only to landing page, all recipes, categories, log in and sign up pages in navigation.
+* Checked that all recipes page displays all recipes, recipe pages by category display recipes for the category and that get_recipe displays a single recipe.
+* Checked that sign up and login pages work properly: sign up/log in when conditions are met, error messages are displayed when a condition is not met.
+* Checked that logged in users gain access to new recipe, profile, edit recipe and login pages.
+* Checked that log out logs user out.
+* Checked that profile page displays correct username and recipe cards for recipes added by that user, along with edit/delete buttons. Ensured the buttons work.
+* Checked that alternate header and text is shown with jinja when viewing a profile that has not added any recipes.
+* Checked that form for new recipe requires all fields and submits the recipe to the database.
+* Checked that edit recipe button directs to page to edit recipe, and that edits are saved for that recipe.
+* Checked that delete recipe deletes the recipe.
+* Checked that trying to access a page for a recipe that has been deleted returns a 404 page.
 
 **Known Issues**
 
@@ -274,6 +304,8 @@ them by category.
 
 **Code**
 
+The code for this project is largely based on the lessons provided by [Code Institute](https://codeinstitute.net/), the Python in particular.
+
 [This Github issue post solution](https://github.com/Dogfalo/materialize/issues/1000) was adapted to stop the navbar brand logo from clipping out on smaller screen sizes.
 
 [This Stack Overflow solution](https://stackoverflow.com/questions/37194886/does-materialize-css-framework-have-a-container-fluid-equivalent) was used to achieve full-width hero image background.
@@ -284,9 +316,13 @@ them by category.
 
 [This Stack Overflow post](https://stackoverflow.com/questions/36458482/how-to-not-render-a-entire-string-with-jinja2) was used for inspiration as to how to truncate recipe descriptions in cards to avoid overflow.
 
-[The JS method used in this Code Institute project](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
+[The JS method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and delete input fields for add and edit recipe forms.
 
 **Content**
+
+This readme is similar in structure and language to the readme files of my previous projects.
+
+Site content such as callout, headings and the like were written by the developer.
 
 The recipes added to the site during development are from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com) and [bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes). The same sites were used for inspiration for page layout and database structure.
 
