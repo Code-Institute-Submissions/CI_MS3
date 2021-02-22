@@ -11,7 +11,7 @@
     <div class="col s12 m6">
       <div class="card large">
         <div class="card-image rounded-element">
-          <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><img class="" src="{{ recipe.recipe_image }}" alt="Image"></a>
+          <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><img class="" src="{{ recipe.recipe_image }}" alt="Recipe image"></a>
           <a href="{{ url_for('get_recipe', recipe_id=recipe._id) }}"><h6 class="category-cards-text card-title">{{ recipe.recipe_name }}</h6></a>
         </div>
         <div class="card-content">

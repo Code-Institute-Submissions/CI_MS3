@@ -147,6 +147,10 @@ body {
 
 /* INDIVIDUAL RECIPE PAGES */
 
+.recipe-items {
+    margin-bottom: 7px;
+}
+
 .recipe-image-container {
     height: 100%;
     width: 100%;
