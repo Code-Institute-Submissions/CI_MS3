@@ -8,18 +8,16 @@
         type="text/css">
 
     <!-- Google Fonts, you might want to change or adjust these before submission -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Noto+Sans&display=swap" rel="stylesheet">
+
     <!-- /Google Fonts -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" type="text/css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-
-    {% block styles %}
-    {% endblock %}
-
     <title>The Donnybrook Cookbook</title>
 </head>
 
@@ -92,6 +90,7 @@
         {% endif %}
         {% endwith %}
     </section>
+
     {% block content %}
     {% endblock %}
 
@@ -108,14 +107,17 @@
                     <p class="white-text">Social Media</p>
                     <ul class="list-inline">
                         <li><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/explore">
-                                <i class="fab fa-twitter-square" aria-hidden="true"></i></a></li><span
-                            class="sr-only">Twitter</span>
+                                <i class="fab fa-twitter-square" aria-hidden="true"></i><span class="sr-only">Twitter</span>
+                            </a>
+                        </li>
                         <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/">
-                                <i class="fab fa-facebook" aria-hidden="true"></i></a></li><span
-                            class="sr-only">Facebook</span>
+                                <i class="fab fa-facebook" aria-hidden="true"></i><span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
                         <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.instagram.com/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i></a></li><p
-                            class="sr-only">Instagram</p>
+                                <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
