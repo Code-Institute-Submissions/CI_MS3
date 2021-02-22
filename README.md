@@ -133,13 +133,13 @@ There are also links to sign up or log in to the site.
 
 **Tools**
 
-W3C Markup Validator was used to validate the HTML code. [Results]()
+W3C Markup Validator was used to validate the the HTML of each page. The only remaining errors reported by the validator appear to be caused by its inability to read Jinja.
 
 W3C CSS Validator was used to validate the CSS code. [Results]()
 
 JSHint was used to validate the JavaScript code. [Results]()
 
-PEP8 Online was used to validate the Python code. [Results]()
+PEP8 Online was used to validate the Python code. [Results]() Fixing this error would result in a 'line too long' error.
 
 **Manual**
 
