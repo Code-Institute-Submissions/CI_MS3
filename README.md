@@ -82,7 +82,7 @@ were drafted in MS Paint prior to development.
 * Each page includes a navigation bar.
 * Each page includes a footer with copyright information and social media links.
 * The landing page includes a short explanation of the site's purpose, as well as links to recipes sorted by their category. 
-There are also links to sign up or log in to the site.
+There is also a button to sign up to the site.
 * The Sign up page contains a form that lets users register an account.
 * The Log in page contains a form that allows users to log in to their account.
 * The passwords for accounts are hashed to enhance security.
@@ -97,7 +97,6 @@ There are also links to sign up or log in to the site.
  images hosted elsewhere.
 * More detailed userpages - The site is ‘communal’ in a way and it would be a beneficial feature if users could upload an image of themselves and
  perhaps an About section where they can write a bit about themselves and their particular interests related to cooking.
-* Following users - A feature to allow users to follow others and get notifications about recipes added.
 * A search functionality for keywords to help people find what they want once the collection size increased.
 
 ** **
@@ -119,7 +118,7 @@ There are also links to sign up or log in to the site.
 3. MongoDB
 * The service used to store the data necessary for building the site.
 4. JQuery
-* JavaScript Library used primarily for enhanced Materialize functionality
+* JavaScript Library used here primarily for enhanced Materialize functionality.
 5. Google Fonts
 * Used to source the fonts used for the site.
 6. Font Awesome
@@ -150,7 +149,7 @@ Home page
 * Checked that all brand-logo, navigation links, social links, category links and callout signup button lead where they're supposed to.
 * Checked that users who are not logged in see Home, Recipes, Log In and Sign Up links in navigation.
 * Checked that logged in users see Home, Recipes, Profile, New Recipe and Log Out links in navigation.
-* Checked that Recipes dropdown works, and that on smaller screens the sidenav works and the links lead to the correct page.
+* Checked that Recipes dropdown works, and that on smaller screens the sidenav works and the links lead to the correct pages.
 
 Sign up page
 
@@ -166,29 +165,50 @@ Login page
 Profile page
 
 * Checked that the correct username is displayed on the page.
-* Checked that if user has not added recipes, none are displayed and the page shows a message saying so. A link to New Recipe farm is also provided.
+* Checked that if user has not added recipes, none are displayed and the page shows a message saying so. A link to New Recipe form is also provided.
 * Checked that if recipes have been added, They are listed on the page.
 * Checked that recipes on this page are only from the user, and that they have edit and delete buttons on the card.
 * Checked that edit button brings user to edit recipe page for that recipe.
 * Checked that delete button deletes recipe.
+* Checked that log out navigation link logs user out of session.
 
+Get recipe page
 
-* Checked that there are no prominent issues with overflow or clipping on any of the pages.
-* Checked that users who are not logged in have access only to landing page, all recipes, categories, log in and sign up pages in navigation.
-* Checked that all recipes page displays all recipes, recipe pages by category display recipes for the category and that get_recipe displays a single recipe.
-* Checked that sign up and login pages work properly: sign up/log in when conditions are met, error messages are displayed when a condition is not met.
-* Checked that logged in users gain access to new recipe, profile, edit recipe and login pages.
-* Checked that log out logs user out.
-* Checked that profile page displays correct username and recipe cards for recipes added by that user, along with edit/delete buttons. Ensured the buttons work.
-* Checked that alternate header and text is shown with jinja when viewing a profile that has not added any recipes.
-* Checked that form for new recipe requires all fields and submits the recipe to the database.
-* Checked that edit recipe button directs to page to edit recipe, and that edits are saved for that recipe.
-* Checked that delete recipe deletes the recipe.
+* Checked that viewing any particular recipe opens the page for the same recipe.
+* Checked that all input information is displayed on the page in its assigned place.
 * Checked that trying to access a page for a recipe that has been deleted returns a 404 page.
+
+New recipe page
+
+* Checked that all fields are required and abide by their min and maxlength properties.
+* Checked that ingredient and instruction fields are generated and deleted dynamically as prompted.
+* Checked that form submits the recipe to the database by clicking Submit, and user is redirected to All recipes page.
+
+Edit recipe page
+
+* Checked that all fields are required and abide by their min and maxlength properties.
+* Checked that appropriate number of ingredients and steps are displayed as edit page is loaded.
+* Checked that ingredient and instruction fields are generated and deleted dynamically as prompted.
+* Checked that the changes are saved to the recipe by clicking Edit recipe button, and the page is reloaded with the updated changes.
+
+All recipes page
+
+* Checked that all recipes submitted to the site are loaded here and the cards work by redirecting to Get recipe page.
+
+Recipes by category pages
+
+* Checked that recipes with the assigned category are loaded on each category page and that the cards work by redirecting to Get recipe page.
+
+**Responsiveness**
+
+* Chrome DevTools were used to the test the responsiveness of the site on various tablet and mobile devices. Additional responsiveness testing was carried
+out on Microsoft Edge and Mozilla Firefox browsers.
 
 **Known Issues**
 
 * Images in cards are sometimes subject to issues such as stretching and cropping.
+* On some tablet device sizes 'Home' link in navigation might clip into the brand logo while logged in.
+* The recipe images on Get recipe page can be of various sizes and sometimes negatively affect the visual appeal of the layout by having too much height.
 
 ** **
 
@@ -238,7 +258,6 @@ $ git clone https://github.com/ssruoh/CI_MS3
 ```
 
 **Setting up the environment variables**
-
 
 1. Start up Gitpod workspace. Create app.py file
 2. Create .gitignore file
@@ -362,7 +381,7 @@ delete input fields for add and edit recipe forms.
 
 **Content**
 
-This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute projects
+This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute project readmes
  of [deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) and [MatthewYong](https://github.com/MatthewYong/recipes-connected)
 
 Site content such as callout, headings and the like were written by the developer.
@@ -373,12 +392,10 @@ The recipes added to the site during development are from [allrecipes.com](https
 **Media**
 
 Images used during development are sourced from [allrecipes.com](https://www.allrecipes.com), [delish.com](https://www.delish.com), 
-[bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes) or [Google Images](https://www.google.com/imghp?hl=en)
+[bbcgoodfood.com](https://www.bbcgoodfood.com/recipes/collection/irish-recipes) or [Google Images](https://www.google.com/imghp?hl=en).
 
 **Acknowledgments**
 
 My Code Institute Mentor for helpful feedback and ideas.
 
-The Code Institute Tutors for their support.
-
-My friends for help with testing the site.
+The Code Institute Tutors for their support and help with troubleshooting.
