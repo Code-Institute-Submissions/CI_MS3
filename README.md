@@ -35,15 +35,15 @@ them by category.
 The project utilizes [MongoDB](https://www.mongodb.com) for the creation of a database. The database
 'cookbook' is structured into three collections:
 
-![Database schema](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-schema.PNG)
+![Database structure](https://github.com/ssruoh/CI_MS3/blob/master/static/images/database-images/db-schema.PNG)
 
 Below are examples of entries in each collection:
 
-[categories](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-categories-image.PNG)
+[categories](https://github.com/ssruoh/CI_MS3/blob/master/static/images/database-images/db-categories-image.PNG)
 
-[recipes](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-recipes-image.PNG)
+[recipes](https://github.com/ssruoh/CI_MS3/blob/master/static/images/database-images/db-recipes-image.PNG)
 
-[users](https://github.com/ssruoh/CI_MS3/blob/master/static/images/db-users-image.PNG)
+[users](https://github.com/ssruoh/CI_MS3/blob/master/static/images/database-images/db-users-image.PNG)
 
 ** **
 
@@ -85,8 +85,10 @@ were drafted in MS Paint prior to development.
 There are also links to sign up or log in to the site.
 * The Sign up page contains a form that lets users register an account.
 * The Log in page contains a form that allows users to log in to their account.
+* The passwords for accounts are hashed to enhance security.
 * Users who log in gain access to the New Recipe link. This page includes a form that allows users to submit their own recipes to the site.
 * Users who log in gain access to the Profile link. This page allows users to view, edit and delete recipes they have uploaded.
+* Trying to view the page of a recipe that no longer exists returns a custom 404 page.
 
 **Features To Implement**
 
@@ -135,13 +137,41 @@ There are also links to sign up or log in to the site.
 
 W3C Markup Validator was used to validate the the HTML of each page. The only remaining errors reported by the validator appear to be caused by its inability to read Jinja.
 
-W3C CSS Validator was used to validate the CSS code. [Results]()
+W3C CSS Validator was used to validate the CSS code. [Results](https://github.com/ssruoh/CI_MS3/blob/master/static/images/testing-images/w3c-css-validation.PNG)
 
-JSHint was used to validate the JavaScript code. [Results]()
+JSHint was used to validate the JavaScript code. [Results](https://github.com/ssruoh/CI_MS3/blob/master/static/images/testing-images/JSHint.PNG)
 
-PEP8 Online was used to validate the Python code. [Results]() Fixing this error would result in a 'line too long' error.
+PEP8 Online was used to validate the Python code. [Results](https://github.com/ssruoh/CI_MS3/blob/master/static/images/testing-images/PEP8online.PNG) Fixing this error would result in a 'line too long' error.
 
 **Manual**
+
+Home page
+
+* Checked that all brand-logo, navigation links, social links, category links and callout signup button lead where they're supposed to.
+* Checked that users who are not logged in see Home, Recipes, Log In and Sign Up links in navigation.
+* Checked that logged in users see Home, Recipes, Profile, New Recipe and Log Out links in navigation.
+* Checked that Recipes dropdown works, and that on smaller screens the sidenav works and the links lead to the correct page.
+
+Sign up page
+
+* Checked that both fields are required and validation is shown correctly.
+* Checked that entering a valid username and password creates an account, returns the profile page and a flash message saying 'Signup Successful!'.
+
+Login page
+
+* Checked that if user inputs non-existent username a flash message says either the username or password is incorrect.
+* Checked that if user inputs correct username but wrong password, a flash message says either the username or password is incorrect.
+* Checked that a user entering an existing username and correct password are logged in, and brought to the profile page with a flash message welcoming them.
+
+Profile page
+
+* Checked that the correct username is displayed on the page.
+* Checked that if user has not added recipes, none are displayed and the page shows a message saying so. A link to New Recipe farm is also provided.
+* Checked that if recipes have been added, They are listed on the page.
+* Checked that recipes on this page are only from the user, and that they have edit and delete buttons on the card.
+* Checked that edit button brings user to edit recipe page for that recipe.
+* Checked that delete button deletes recipe.
+
 
 * Checked that there are no prominent issues with overflow or clipping on any of the pages.
 * Checked that users who are not logged in have access only to landing page, all recipes, categories, log in and sign up pages in navigation.
@@ -288,6 +318,7 @@ them by category.
 * Newcomers are instructed to sign up to the site on the landing page, and there is a link in the navigation bar to do the same if users aren't signed in.
 
 **Returning visitors:**
+
 > I can log in.
 * The navigation bar has a link to form that allows users to log in.
 

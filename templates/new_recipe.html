@@ -48,14 +48,14 @@
 
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input id="servings" type="text" class="validate" name="servings" required>
+                        <input id="servings" type="text" class="validate" minlength="1" maxlength="15" name="servings" required>
                         <label for="servings" class="white-text">Servings</label>
                     </div>
 
                     <!-- Cook-time input -->
 
                     <div class="input-field col s12 m6">
-                        <input id="cook_time" type="text" class="validate" name="cook_time" required>
+                        <input id="cook_time" minlength="1" maxlength="15" type="text" class="validate" name="cook_time" required>
                         <label for="cook_time" class="white-text">Cooking Time</label>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
 
                 <div class="row" id="ingredient-field">
                     <div class="input-field col s11">
-                        <input id="ingredients" type="text" class="validate" name="ingredients" required>
+                        <input id="ingredients" minlength="5" maxlength="50" type="text" class="validate" name="ingredients" required>
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
 
                 <div class="row" id="steps">
                     <div class="input-field col s11">
-                        <input id="instructions" name="instructions" type="text" class="validate" required>
+                        <input id="instructions" minlength="5" maxlength="150" name="instructions" type="text" class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_image" type="text" class="validate" name="recipe_image" required>
+                        <input id="recipe_image" minlength="5" maxlength="250" type="text" class="validate" name="recipe_image" required>
                         <label for="recipe_image" class="white-text">Image URL</label>
                     </div>
                 </div>

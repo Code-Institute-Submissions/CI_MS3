@@ -52,7 +52,7 @@
 
                 <div class="row">
                     <div class="input-field col s12 m6">
-                        <input id="servings" value="{{ recipe.servings }}" type="text" class="validate" name="servings"
+                        <input id="servings" value="{{ recipe.servings }}" minlength="1" maxlength="15" type="text" class="validate" name="servings"
                             required>
                         <label for="servings" class="white-text">Servings</label>
                     </div>
@@ -60,7 +60,7 @@
                     <!-- Cook-time input -->
 
                     <div class="input-field col s12 m6">
-                        <input id="cook_time" value="{{ recipe.cook_time }}" type="text" class="validate"
+                        <input id="cook_time" value="{{ recipe.cook_time }}" minlength="1" maxlength="15" type="text" class="validate"
                             name="cook_time" required>
                         <label for="cook_time" class="white-text">Cooking Time</label>
                     </div>
@@ -72,14 +72,14 @@
                     <div class="input-field col s11">
                         {% for ingredient in recipe.ingredients %}
                         {% if ingredient == recipe.ingredients[0] %}
-                        <input id="ingredients" type="text" class="validate" value="{{ ingredient }}" name="ingredients"
+                        <input id="ingredients" type="text" class="validate" minlength="5" maxlength="50" value="{{ ingredient }}" name="ingredients"
                             required>
                         <label for="ingredients" class="white-text">Ingredients</label>
                     </div>
                     {% else %}
                     <div class="new-ingredient">
                         <div class="input-field col s11">
-                            <input type="text" name="ingredients" value="{{ ingredient }}" class="validate" required>
+                            <input type="text" name="ingredients" minlength="5" maxlength="50" value="{{ ingredient }}" class="validate" required>
                             <label for="ingredients" class="white-text">Another ingredient</label>
                         </div>
                         <div class="col s1">
@@ -102,14 +102,14 @@
                     <div class="input-field col s11">
                         {% for instruction in recipe.instructions %}
                         {% if instruction == recipe.instructions[0] %}
-                        <input id="instructions" name="instructions" type="text" value="{{ instruction }}"
+                        <input id="instructions" name="instructions" minlength="5" maxlength="150" type="text" value="{{ instruction }}"
                             class="validate" required>
                         <label for="instructions" class="white-text">Instructions</label>
                     </div>
                     {% else %}
                     <div class="new-instruction-step">
                         <div class="input-field col s11">
-                            <input type="text" name="instructions" class="validate" value="{{ instruction }}" required>
+                            <input type="text" name="instructions" minlength="5" maxlength="150" class="validate" value="{{ instruction }}" required>
                             <label for="instructions" class="white-text">Instructions</label>
                         </div>
                         <div class="col s1">
@@ -130,7 +130,7 @@
 
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="recipe_image" type="text" value="{{ recipe.recipe_image }}" class="validate"
+                        <input id="recipe_image" minlength="5" maxlength="250" type="text" value="{{ recipe.recipe_image }}" class="validate"
                             name="recipe_image" required>
                         <label for="recipe_image" class="white-text">Image URL</label>
                     </div>
