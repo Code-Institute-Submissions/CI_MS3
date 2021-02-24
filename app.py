@@ -33,7 +33,7 @@ def all_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-# Recipes by category
+# Recipes by category, solution by MatthewYong on Github
 @app.route("/recipes_by_category/<category>")
 def recipes_by_category(category):
     category_current = {"category_name": category}
@@ -106,6 +106,7 @@ def login():
 # Profile page, also lists recipes added by current user on the page
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Solution for listing recipes by a given user by MatthewYong on Github
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     current_user = {"added_by": username}

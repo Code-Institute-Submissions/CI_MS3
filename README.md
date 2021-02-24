@@ -379,6 +379,9 @@ descriptions in cards to avoid overflow.
 [The JQuery method used in this Code Institute project by deevdz](https://github.com/Code-Institute-Submissions/deevdz-milestone-project-3) was adapted to dynamically add and 
 delete input fields for add and edit recipe forms.
 
+[The Python solution by MatthewYong in This Code Institute Project](https://github.com/MatthewYong/recipes-connected/blob/master/app.py) for listing recipes by category 
+and user recipes for Profile page were adapted for this project.
+
 **Content**
 
 This readme is similar in structure and language to the readme files of my previous projects. Inspiration for some sections and testing was drawn from the Code Institute project readmes
